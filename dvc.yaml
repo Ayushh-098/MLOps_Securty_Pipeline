@@ -13,3 +13,16 @@ stages:
     - src/preprocess.py
     outs:
     - data/processed/clean.csv
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/processed/clean.csv
+    - src/train.py
+    outs:
+    - models/model.pkl
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - data/processed/clean.csv
+    - models/model.pkl
+    - src/evaluate.py
