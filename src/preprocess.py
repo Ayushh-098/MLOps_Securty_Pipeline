@@ -12,6 +12,13 @@ os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
 df = pd.read_csv(input_path)
 
+from sklearn.preprocessing import LabelEncoder
+
+# Encode all categorical columns
+for col in df.select_dtypes(include=["object"]).columns:
+    le = LabelEncoder()
+    df[col] = le.fit_transform(df[col])
+
 # Example preprocessing (adjustable later)
 df = df.dropna()
 

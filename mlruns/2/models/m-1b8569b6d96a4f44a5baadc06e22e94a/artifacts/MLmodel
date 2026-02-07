@@ -1,0 +1,23 @@
+artifact_path: file:C:/Users/mayus/Documents/MLops Security Pipeline/mlruns/2/models/m-1b8569b6d96a4f44a5baadc06e22e94a/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.9.0
+model_id: m-1b8569b6d96a4f44a5baadc06e22e94a
+model_size_bytes: 6290549
+model_uuid: m-1b8569b6d96a4f44a5baadc06e22e94a
+prompts: null
+run_id: 199cbc0e0d174574ad288fd8b79b31ad
+utc_time_created: '2026-02-07 02:01:16.646215'
