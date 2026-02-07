@@ -6,3 +6,10 @@ stages:
     - src/load_data.py
     outs:
     - data/processed/processed.csv
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - data/processed/processed.csv
+    - src/preprocess.py
+    outs:
+    - data/processed/clean.csv
