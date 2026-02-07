@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py
+    deps:
+    - path: data/raw/data.csv
+      hash: md5
+      md5: ac0ec705fbd170226bebf2245abc0ead
+      size: 3388547
+    - path: src/load_data.py
+      hash: md5
+      md5: f359efd3d088d5aa3fb8acc899759824
+      size: 483
+    outs:
+    - path: data/processed/processed.csv
+      hash: md5
+      md5: 8879fea76a02b855278cb417dcbebaad
+      size: 3118048
